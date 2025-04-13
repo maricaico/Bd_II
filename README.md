@@ -7,3 +7,6 @@
 ### Matrícula: 20230083988
 
 ### Email: mari_caico@yahoo.com.br
+
+
+### [tarefa01.md](https://github.com/maricaico/Bd_II/blob/main/tarefas/t01/tarefa01.md)
