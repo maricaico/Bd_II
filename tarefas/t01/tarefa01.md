@@ -82,5 +82,50 @@ SELECT * FROM Pedidos NATURAL JOIN Clientes;
 Esse join funciona corretamente porque id_cliente é a única coluna com o mesmo nome nas duas tabelas. No entanto, se ambas também tivessem uma coluna chamada data_modificacao, o NATURAL JOIN tentaria unir por id_cliente e por data_modificacao, o que provavelmente não é o comportamento desejado.
 
 
+## Window Functions no PostgreSQL
+
+**O que são:**  
+São funções que permitem fazer cálculos sobre um conjunto de linhas relacionadas à linha atual — chamadas de "janela" — sem agrupar os resultados como ocorre com o `GROUP BY`. Isso significa que o resultado mantém todas as linhas originais, mas adiciona novas colunas com informações calculadas.
+
+**Para que servem:**  
+São muito úteis para análises mais avançadas, como:
+- Mostrar a média de um grupo sem perder o detalhe de cada item;
+- Criar rankings e posições;
+- Comparar valores com linhas anteriores ou seguintes.
+
+### Como usar
+
+As Window Functions são usadas junto da cláusula `OVER()`, que define o comportamento da janela.
+
+- `PARTITION BY`: (opcional) Divide os dados em grupos, como por departamento ou categoria. Os cálculos recomeçam para cada grupo.
+- `ORDER BY`: (opcional, mas muito comum) Define a ordem das linhas dentro de cada grupo. Essencial para funções de ranking ou navegação (como LAG e LEAD).
+
+### Exemplos de uso
+
+#### 1. Agregação
+```sql
+AVG(salario) OVER (PARTITION BY cod_depto)
+
+    Calcula a média salarial dentro de cada departamento, mas exibe essa média em cada linha de funcionário, sem remover ninguém da tabela.
+
+2. Ranking
+
+RANK() OVER (PARTITION BY cod_depto ORDER BY salario DESC)
+
+    Dá uma "posição" para cada funcionário no ranking de salários dentro do seu departamento. Útil para saber, por exemplo, quem ganha mais em cada setor.
+
+3. Navegação
+
+LAG(salario) OVER (ORDER BY salario)
+
+    Mostra o salário da linha anterior com base na ordenação definida. Ótimo para calcular diferenças entre valores consecutivos.
+
+```
+
+Essas funções são poderosas para análises avançadas sem perder o detalhe por linha. É necessário evitar GROUP BY quando quiser manter todos os dados visíveis com contextos agregados.
+
+
+
+
 
 
