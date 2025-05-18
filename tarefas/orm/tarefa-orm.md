@@ -1,3 +1,10 @@
+## Links para Scripts e Programas
+
+* [Script de Criação do Esquema e Povoamento Inicial (PostgreSQL)](./scripts_db/schema_e_dados_atividadesbd.sql)
+
+
+# Tarefa – ODBC e ORM em Python
+
 ## ODBC em Python
 
 ODBC (Open Database Connectivity) é uma API padrão desenvolvida pela Microsoft para acessar Sistemas de Gerenciamento de Banco de Dados (SGBDs). Ela permite que aplicações acessem dados de diferentes SGBDs usando uma interface comum, sem precisar se preocupar com as especificidades de cada banco.
