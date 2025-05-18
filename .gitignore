@@ -1,0 +1,7 @@
+# Ignorar arquivos de ambiente virtual
+venv_db/
+venv/
+
+# Ignorar arquivos .env contendo segredos
+.env
+*.env 

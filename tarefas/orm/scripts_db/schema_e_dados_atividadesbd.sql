@@ -1,3 +1,7 @@
+-- Comandos manuais executados previamente no psql:
+-- CREATE ROLE usuario WITH LOGIN PASSWORD 'sua_senha';
+-- CREATE DATABASE atividadesbd WITH OWNER usuario;
+
 DROP TABLE IF EXISTS atividade CASCADE;
 DROP TABLE IF EXISTS projeto CASCADE;
 DROP TABLE IF EXISTS departamento CASCADE;
