@@ -9,4 +9,10 @@
 ### Email: mari_caico@yahoo.com.br
 
 
-### [tarefa01.md](https://github.com/maricaico/Bd_II/blob/main/tarefas/t01/tarefa01.md)
+### * [Tarefa 01](./tarefas/t01/tarefa01.md)
+
+### * [Tarefa ‑ ODBC e ORM](./tarefas/orm/tarefa-orm.md)
+
+
+
+
