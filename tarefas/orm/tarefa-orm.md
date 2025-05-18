@@ -2,6 +2,8 @@
 
 * [Script de Criação do Esquema e Povoamento Inicial (PostgreSQL)](./scripts_db/schema_e_dados_atividadesbd.sql)
 
+* [Programa em Python com pyodbc](./programa_odbc.py)
+
 
 # Tarefa – ODBC e ORM em Python
 
