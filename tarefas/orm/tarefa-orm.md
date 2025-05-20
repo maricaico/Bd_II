@@ -4,6 +4,8 @@
 
 * [Programa em Python com pyodbc](./programa_odbc.py)
 
+* [Programa em Python com Django ORM](./programa_orm_django.py)
+
 
 # Tarefa – ODBC e ORM em Python
 
